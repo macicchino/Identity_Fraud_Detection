@@ -4,6 +4,7 @@ A graph-based fraud detection engine built with **Python** and **Neo4j AuraDB**.
 
 ## 🚀 The "Smoking Gun" Investigation
 In this project, I moved beyond traditional tabular data to visualize and automate the detection of fraud rings. 
+![Fraud Detection Graph](./fraud-graph.png)
 
 ### Case Study: Entity Resolution (The Lambert Ring)
 During execution, the system identified a high-risk connection:
