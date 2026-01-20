@@ -2,7 +2,7 @@
 
 A graph-based fraud detection engine built with **Python** and **Neo4j AuraDB**. This project demonstrates how to identify "Synthetic Identities" and "First-Party Fraud" by uncovering hidden relationships between customer entities.
 
-## 🔍 The "Smoking Gun" Investigation
+## The "Smoking Gun" Investigation
 In this project, I moved beyond traditional tabular data to visualize and automate the detection of fraud rings. 
 ![Fraud Detection Graph](./fraud-graph.png)
 
