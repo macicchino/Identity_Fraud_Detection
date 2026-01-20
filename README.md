@@ -6,6 +6,33 @@ A graph-based fraud detection engine built with **Python** and **Neo4j AuraDB**.
 In this project, I moved beyond traditional tabular data to visualize and automate the detection of fraud rings. 
 ![Fraud Detection Graph](./fraud-graph.png)
 
+## 🔍 The "Smoking Gun" Investigation: From Tables to Graphs
+
+In this project, I moved beyond traditional tabular data to visualize and automate the detection of fraud rings. 
+
+### 🛑 The Limitation of Tabular Data
+Standard relational databases (SQL) store information in isolated rows and columns. In a table of 1 million customers, finding two people who share a single phone number requires complex `JOIN` operations that are computationally expensive and often missed by standard batch processing.
+
+### 📊 The Graph Advantage
+By utilizing **Neo4j**, I transformed these data points into a **Knowledge Graph**. In this environment:
+* **Nodes:** Represent entities like Customers and PII (Phone Numbers).
+* **Relationships:** Represent the connections between them.
+
+This allows the system to perform **Entity Resolution** in real-time. Instead of looking for matching strings in a list, the algorithm simply looks for "shared neighbors" in the graph structure.
+
+### 🕵️ Finding the "Lambert Ring"
+The automation script I developed uses Cypher queries to traverse the graph and identify clusters. During execution, it flagged a specific high-risk link:
+* **Jack Lambert** and **John Harold Lambert** appeared as distinct customers.
+* Both were anchored to the same physical device/phone node: `724-555-0199`. 
+
+In a banking environment, this "hub-and-spoke" pattern is a classic indicator of a **Synthetic Identity Ring**, where one fraudster manages multiple accounts using slight variations of a name to exploit credit limits.
+
+---
+
+###  Why this matters for the Developer
+* **Scalability:** Graph traversals stay performant even as the dataset grows to millions of nodes, unlike deep SQL joins.
+* **Automation:** The `neo4j-python-driver` allows this detection to be triggered the moment a new account is opened, moving from "reactive" to "proactive" fraud prevention.
+
 ## 🏦 Banking Risk & Regulatory Context
 
 In a financial institution like **PNC**, fraud detection isn't just about catching a "bad guy"; it's about managing specific risk vectors and maintaining regulatory compliance. 
