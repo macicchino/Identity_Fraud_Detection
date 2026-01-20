@@ -19,7 +19,9 @@ This graph-based approach strengthens **Know Your Customer (KYC)** protocols. By
 ### 3. Reducing False Positives
 Traditional rule-based systems often flag legitimate customers by mistake. Graph analysis allows for **contextual verification**, ensuring that we only flag high-risk clusters while providing a seamless experience for genuine PNC customers.
 
-### Case Study: Entity Resolution (The Lambert Ring)
+---
+
+### 🔦 Case Study: Entity Resolution (The Lambert Ring)
 During execution, the system identified a high-risk connection:
 * **Customer A:** Jack Lambert
 * **Customer B:** John Harold Lambert
@@ -46,7 +48,3 @@ During execution, the system identified a high-risk connection:
    ```bash
    git clone [https://github.com/macicchino/Identity_Fraud_Detection.git](https://github.com/macicchino/Identity_Fraud_Detection.git)
    cd Identity_Fraud_Detection
-
-## Neo4j Aura Relational Chart
-Below is a chart. 
-![Fraud Detection Graph](./fraud-graph.png)
