@@ -9,7 +9,7 @@ In this project, I moved beyond traditional tabular data to visualize and automa
 During execution, the system identified a high-risk connection:
 * **Customer A:** Jack Lambert
 * **Customer B:** John Harold Lambert
-* **Shared PII:** Phone Number (555-0199)
+* **Shared PII:** Phone Number 724-555-0199
 
 **The Insight:** In a standard database, these might look like two separate customers. In this graph, we can see they are likely the same individual or part of a coordinated fraud ring using **Identity Variation** to bypass credit checks or internal controls.
 
