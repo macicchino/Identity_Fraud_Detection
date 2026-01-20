@@ -6,6 +6,19 @@ A graph-based fraud detection engine built with **Python** and **Neo4j AuraDB**.
 In this project, I moved beyond traditional tabular data to visualize and automate the detection of fraud rings. 
 ![Fraud Detection Graph](./fraud-graph.png)
 
+## 🏦 Banking Risk & Regulatory Context
+
+In a financial institution like **PNC**, fraud detection isn't just about catching a "bad guy"; it's about managing specific risk vectors and maintaining regulatory compliance. 
+
+### 1. Synthetic Identity Fraud (SIF)
+By linking disparate names to a single phone number (724-555-0199), this engine detects **Synthetic Identity Fraud**. This is where a fraudster combines real and fake information to create a "new" person who doesn't exist, often costing banks billions in unrecoverable credit losses.
+
+### 2. KYC & AML Compliance
+This graph-based approach strengthens **Know Your Customer (KYC)** protocols. By visualizing connections between entities, we can identify "Coordinated Fraud Rings" that traditional linear databases might miss, aiding in **Anti-Money Laundering (AML)** monitoring.
+
+### 3. Reducing False Positives
+Traditional rule-based systems often flag legitimate customers by mistake. Graph analysis allows for **contextual verification**, ensuring that we only flag high-risk clusters while providing a seamless experience for genuine PNC customers.
+
 ### Case Study: Entity Resolution (The Lambert Ring)
 During execution, the system identified a high-risk connection:
 * **Customer A:** Jack Lambert
