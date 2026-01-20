@@ -25,11 +25,21 @@ The automation script I developed uses Cypher queries to traverse the graph and 
 
 In a banking environment, this "hub-and-spoke" pattern is a classic indicator of a **Synthetic Identity Ring**, where one fraudster manages multiple accounts using slight variations of a name to exploit credit limits.
 
+### 🔦 Case Study: Entity Resolution (The Lambert Ring)
+During execution, the system identified a high-risk connection:
+* **Customer A:** Jack Lambert
+* **Customer B:** John Harold Lambert
+* **Shared PII:** Phone Number 724-555-0199
+
+**The Insight:** In a standard database, these might look like two separate customers. In this graph, we can see they are likely the same individual or part of a coordinated fraud ring using **Identity Variation** to bypass credit checks or internal controls.
+
 ---
 
 ###  Why this matters for the Developer
 * **Scalability:** Graph traversals stay performant even as the dataset grows to millions of nodes, unlike deep SQL joins.
 * **Automation:** The `neo4j-python-driver` allows this detection to be triggered the moment a new account is opened, moving from "reactive" to "proactive" fraud prevention.
+
+---
 
 ## 🏦 Banking Risk & Regulatory Context
 
@@ -43,16 +53,6 @@ This graph-based approach strengthens **Know Your Customer (KYC)** protocols. By
 
 ### 3. Reducing False Positives
 Traditional rule-based systems often flag legitimate customers by mistake. Graph analysis allows for **contextual verification**, ensuring that we only flag high-risk clusters while providing a seamless experience for genuine PNC customers.
-
----
-
-### 🔦 Case Study: Entity Resolution (The Lambert Ring)
-During execution, the system identified a high-risk connection:
-* **Customer A:** Jack Lambert
-* **Customer B:** John Harold Lambert
-* **Shared PII:** Phone Number 724-555-0199
-
-**The Insight:** In a standard database, these might look like two separate customers. In this graph, we can see they are likely the same individual or part of a coordinated fraud ring using **Identity Variation** to bypass credit checks or internal controls.
 
 ---
 
